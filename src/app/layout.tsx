@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "next-themes";
+import Image from "next/image";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -27,12 +28,24 @@ export default function RootLayout({
 			<body className={`${inter.variable} antialiased`}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="dark"
+					defaultTheme="system"
 					enableSystem
 				>
-					<main className="bg-background">
+					<main className="relative h-full min-h-screen bg-background px-3 py-8 transition-all duration-700">
 						<Header />
 						{children}
+						<picture className="-translate-x-1/2 pointer-events-none absolute top-0 left-1/2 h-[550px] w-[1440px]">
+							<Image
+								alt="gradient"
+								loading="eager"
+								sizes="100vw"
+								draggable="false"
+								priority
+								fill
+								src={"/header-gradient.svg"}
+								fetchPriority="high"
+							/>
+						</picture>
 					</main>
 				</ThemeProvider>
 			</body>

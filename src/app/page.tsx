@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
-	return <div>teste</div>;
+	return <div>te amo meu amor</div>;
 }
