@@ -1,1 +1,0 @@
-const BOOK_DATA = [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
