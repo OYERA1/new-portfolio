@@ -9,13 +9,14 @@ interface INavItem {
 
 const NavItem = ({ className, items }: INavItem) => {
 	return (
-		<div className={cn("flex items-center gap-10", className)}>
+		<div className={cn("flex items-center gap-4 ", className)}>
 			{items.map((item) => (
-				<Link
+				<Link className="group transition duration-500"
 					href={item?.link ?? ""}
 					key={item.id}
 				>
 					{item.content}
+					{typeof item.content === 'string' && <span className="block h-[1px] max-w-0 bg-foreground transition-all duration-300 group-hover:max-w-full" />}
 				</Link>
 			))}
 		</div>

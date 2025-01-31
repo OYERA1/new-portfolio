@@ -31,21 +31,21 @@ const NAV_SOCIAL_DATA: IGenericObject[] = [
 	{
 		id: 1,
 		content: (
-			<LinkedinLogo className="text-[24px] duration-150 hover:brightness-75" />
+			<LinkedinLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
 		),
 		link: "https://linkedin.com/in/oyera",
 	},
 	{
 		id: 2,
 		content: (
-			<TwitterLogo className="text-[24px] duration-150 hover:brightness-75" />
+			<TwitterLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
 		),
 		link: "/about",
 	},
 	{
 		id: 3,
 		content: (
-			<GithubLogo className="text-[24px] duration-150 hover:brightness-75" />
+			<GithubLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
 		),
 		link: "/about",
 	},

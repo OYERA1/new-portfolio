@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from 'sonner'
 import "./globals.css";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "next-themes";
@@ -31,7 +32,7 @@ export default function RootLayout({
 					defaultTheme="system"
 					enableSystem
 				>
-					<main className="relative h-full min-h-screen bg-background px-3 py-8 transition-all duration-700">
+					<main className="relative flex h-full min-h-screen flex-col items-center bg-background py-8 transition-all duration-700">
 						<Header />
 						{children}
 						<picture className="-translate-x-1/2 pointer-events-none absolute top-0 left-1/2 h-[550px] w-[1440px]">
@@ -47,6 +48,7 @@ export default function RootLayout({
 							/>
 						</picture>
 					</main>
+					<Toaster richColors />
 				</ThemeProvider>
 			</body>
 		</html>

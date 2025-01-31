@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.btn {
+		@apply border border-neutral-700/20 px-4 py-5 rounded-lg flex w-full items-center justify-center transition-all duration-200;
+	}
+
+	.contains {
+		@apply max-w-screen-lg w-full flex;
+	}
+
+	.col {
+		@apply flex flex-col;
+	}
+}
+
 @layer base {
 	:root {
 		--background: 0, 0%, 98%;
@@ -11,9 +25,8 @@
 		--card-border: 0, 100%, 100%;
 		--accent: 240, 9%, 10%;
 		--card-foreground: 240, 10%, 3.9%;
-		
 	}
-	
+
 	.dark {
 		--background: 0, 0%, 5%;
 		--foreground: 0, 0%, 95%;
