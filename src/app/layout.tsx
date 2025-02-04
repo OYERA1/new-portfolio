@@ -32,7 +32,7 @@ export default function RootLayout({
                     defaultTheme="system"
                     enableSystem
                 >
-                    <main className="relative flex h-full min-h-screen flex-col items-center bg-background py-8 transition-all duration-700">
+                    <main className="relative flex h-full min-h-screen flex-col items-center overflow-x-hidden bg-background py-8 transition-all duration-700">
                         <Header />
                         {children}
                         <picture className="-translate-x-1/2 pointer-events-none absolute top-0 left-1/2 h-[550px] w-[1440px]">
