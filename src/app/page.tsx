@@ -1,3 +1,4 @@
+import { Cards } from "@/components/cards/cards";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
 				</h2>
 			</div>
 			<div className="mt-10 flex max-w-[400px] gap-20">
-				<Link href={'/cv'} className="btn bg-neutral-800/90 font-semibold text-white/90 shadow-inner shadow-white/20 hover:bg-neutral-800 dark:bg-neutral-800/20 dark:text-white hover:dark:bg-neutral-800/75 ">
+				<Link href={'https://cv.oyera.dev'} className="btn bg-neutral-800/90 font-semibold text-white/90 shadow-inner shadow-white/20 hover:bg-neutral-800 dark:bg-neutral-800/20 dark:text-white hover:dark:bg-neutral-800/75 ">
 					Curriculo
 				</Link>
 				<Link href={'/contact'} className="btn bg-background text-foreground shadow-xl hover:bg-neutral-300/20 dark:hover:bg-neutral-800/20">
@@ -30,36 +31,12 @@ export default function Home() {
 			<h2 className="font-black text-6xl">
 				Me conheça!
 			</h2>
-			<div className="flex flex-col gap-10">
-				<div className="flex gap-10">
-					<Link href={'/about'} className="flex aspect-square size-1/2 flex-col items-center justify-center rounded-xl border border-neutral-200/80 bg-neutral-100 p-10">
-						<div className="text-center">
-							<h3 className="font-bold text-2xl">Sobre mim</h3>
-							<h4 className=" text-neutral-500">Quem eu sou e o que eu faço</h4>
-						</div>
-					</Link>
-					<Link href={'/books'} className="flex aspect-square size-1/2 flex-col items-center justify-center rounded-xl border border-neutral-200/80 bg-neutral-100 p-10">
-						<div className="text-center">
-							<h3 className="font-bold text-2xl">Livros</h3>
-							<h4 className=" text-neutral-500">Quem eu sou e o que eu faço</h4>
-						</div>
-					</Link>
-				</div>
-				<div className="flex gap-10">
-					<Link href={'/contact'} className="flex aspect-square size-1/2 flex-col items-center justify-center rounded-xl border border-neutral-200/80 bg-neutral-100 p-10">
-						<div className="text-center">
-							<h3 className="font-bold text-2xl">Sobre mim</h3>
-							<h4 className=" text-neutral-500">Quem eu sou e o que eu faço</h4>
-						</div>
-					</Link>
-					<Link href={'/books'} className="flex aspect-square size-1/2 flex-col items-center justify-center rounded-xl border border-neutral-200/80 bg-neutral-100 p-10">
-						<div className="text-center">
-							<h3 className="font-bold text-2xl">Livros</h3>
-							<h4 className=" text-neutral-500">Quem eu sou e o que eu faço</h4>
-						</div>
-					</Link>
-				</div>
+			<div className="grid grid-cols-2 gap-7">
+				<Cards title="Sobre mim" link="/about" description="Quem sou e o que faço" />
+				<Cards title="Livros" link="/books" description="Livros que já li e gosto" />
+				<Cards title="Stack" link="/stack" description="Ferramentas que utilizo" />
+				<Cards title="Playlist" link="/music" description="Quais músicas estou ouvindo no momento" />
 			</div>
 		</div>
-	</div >;
+	</div >
 }
