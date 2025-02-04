@@ -1,4 +1,5 @@
 import { Cards } from "@/components/cards/cards";
+import Spotify from "@/components/icons/spotify";
 import Link from "next/link";
 
 export default function Home() {
@@ -35,7 +36,7 @@ export default function Home() {
 				<Cards title="Sobre mim" link="/about" description="Quem sou e o que faço" />
 				<Cards title="Livros" link="/books" description="Livros que já li e gosto" />
 				<Cards title="Stack" link="/stack" description="Ferramentas que utilizo" />
-				<Cards title="Playlist" link="/music" description="Quais músicas estou ouvindo no momento" />
+				<Cards img={<Spotify fontSize={250} />} title="Playlist" link="/music" description="Quais músicas estou ouvindo no momento" />
 			</div>
 		</div>
 	</div >

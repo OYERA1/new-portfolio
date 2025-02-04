@@ -37,7 +37,7 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="flex w-full flex-col items-center py-20">
+        <main className="flex w-full flex-col items-center py-20">
             <div className="contains py-10">
                 <h1 className="font-bold text-7xl text-white ">Entre em contato</h1>
             </div>
@@ -100,6 +100,6 @@ export default function ContactPage() {
                     </form>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
