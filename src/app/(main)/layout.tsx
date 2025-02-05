@@ -6,18 +6,12 @@ import { Header } from "@/components/header";
 import { ThemeProvider } from "next-themes";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-    title: "Inicio | Oyera",
-    description: "Meu portfolio :)",
-};
-
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

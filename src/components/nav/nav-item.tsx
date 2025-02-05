@@ -9,7 +9,7 @@ interface INavItem {
 
 const NavItem = ({ className, items }: INavItem) => {
 	return (
-		<div className={cn("flex items-center gap-4 ", className)}>
+		<div className={cn("flex items-center gap-2 text-lg md:gap-8", className)}>
 			{items.map((item) => (
 				<Link className="group transition duration-500"
 					href={item?.link ?? ""}

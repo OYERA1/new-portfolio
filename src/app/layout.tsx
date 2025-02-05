@@ -8,8 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Oyera",
-    description: "Meu portfolio :)",
+    title: {
+        default: "oyera.dev",
+        template: "%s | oyera.dev",
+    },
+
+    description: "Portfolio de Luan Oyera",
+
 };
 
 export default function RootLayout({

@@ -6,9 +6,9 @@ import { NAV_DATA, NAV_SOCIAL_DATA } from "./data";
 
 const Header = () => {
 	return (
-		<header className="contains relative z-10 flex text-accent/70">
+		<header className="contains relative z-10 flex px-5 text-accent/70 md:px-0">
 			<Nav>
-				<div className="flex gap-4">
+				<div className="flex gap-2 md:gap-8">
 					<Link
 						href={"/"}
 						className="font-extrabold text-3xl text-black/80 dark:text-white/80"
@@ -17,13 +17,13 @@ const Header = () => {
 					</Link>
 					<NavItem items={NAV_DATA} />
 				</div>
-				<div className="flex gap-6">
+				<div className="flex gap-2 md:gap-6">
 					<NavItem
-						className="gap-6"
+						className="gap-2 md:gap-6"
 						items={NAV_SOCIAL_DATA}
 					/>
 
-					<div className="h-6 w-[1px] bg-accent/30 " />
+					<div className="hidden h-6 w-[1px] bg-accent/30 md:block " />
 					<ToggleSwitcher />
 				</div>
 			</Nav>

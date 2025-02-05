@@ -20,7 +20,7 @@ const Cards = ({ description, img, link, title }: CardsProps) => {
                 <h3 className="font-bold text-2xl">{title}</h3>
                 <h4 className=" text-neutral-500">{description}</h4>
             </div>
-            <div className="absolute bottom-20 z-30 ease-in-out *:transition-all *:duration-300 group-hover:*:scale-125">
+            <div className="absolute bottom-10 md:bottom-20 z-30 ease-in-out *:transition-all *:duration-300 group-hover:*:scale-125">
                 {img && typeof img === "string" && (
                     <Image
                         alt={title}

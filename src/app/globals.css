@@ -54,3 +54,7 @@
 		--card-foreground: 0, 0%, 95%;
 	}
 }
+
+* {
+	transition: all .2s;
+}
