@@ -14,7 +14,7 @@ export default function WorkPage() {
 				<h2 className="text-lg">Minha experiência até aqui</h2>
 			</div>
 			<hr className="w-full border-neutral-400/20" />
-			<div className="contains flex-col gap-20 py-10">
+			<div className="contains flex-col gap-20 px-5 py-10">
 				<CardWork
 					icon={
 						<Image
