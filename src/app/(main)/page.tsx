@@ -1,8 +1,16 @@
 import { Cards } from "@/components/cards/cards";
 import Spotify from "@/components/icons/spotify";
+import { headers } from "next/headers";
+import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+	const header = await headers();
+	const userAgent = header.get("user-agent");
+	const isMobile = userAgent?.match(
+		/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+	);
+
 	return (
 		<div className="contains flex-col gap-20 py-20">
 			<div className=" flex flex-col gap-3 px-5 md:p-0">
@@ -21,6 +29,7 @@ export default function Home() {
 				<div className="mt-10 flex max-w-[400px] flex-col gap-20 px-5 md:flex-row md:px-0">
 					<Link
 						href={"https://cv.oyera.dev"}
+						target="_blank"
 						className="btn bg-neutral-800/90 font-semibold text-white/90 shadow-inner shadow-white/20 hover:bg-neutral-800 dark:bg-neutral-800/20 hover:dark:bg-neutral-800/75 "
 					>
 						Curriculo
@@ -40,9 +49,20 @@ export default function Home() {
 					<Cards
 						title="Sobre mim"
 						link="/about"
+						img={
+							<Image
+								unoptimized
+								className="mb-10"
+								alt="mouse"
+								height={isMobile ? 200 : 300}
+								width={isMobile ? 200 : 300}
+								src={"/mouse.png"}
+							/>
+						}
 						description="Quem sou e o que faço"
 					/>
 					<Cards
+						img="/books/Bookshelf.png"
 						title="Livros"
 						link="/books"
 						description="Livros que já li e gosto"
@@ -50,10 +70,13 @@ export default function Home() {
 					<Cards
 						title="Stack"
 						link="/tech"
+						img="/tech/tech-stack.png"
 						description="Ferramentas que utilizo"
 					/>
 					<Cards
-						img={<Spotify className="text-[180px] md:text-[250px]" />}
+						img={
+							<Spotify className="mb-10 text-[180px] md:mb-20 md:text-[250px]" />
+						}
 						title="Playlist"
 						link="/music"
 						description="Quais músicas estou ouvindo no momento"

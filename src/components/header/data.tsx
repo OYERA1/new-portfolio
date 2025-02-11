@@ -3,6 +3,7 @@ import {
 	LinkedinLogo,
 	TwitterLogo,
 } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 
 const NAV_DATA: IGenericObject[] = [
 	{
@@ -31,23 +32,37 @@ const NAV_SOCIAL_DATA: IGenericObject[] = [
 	{
 		id: 1,
 		content: (
-			<LinkedinLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
+			<LinkedinLogo
+				size={24}
+				weight="fill"
+				className="duration-150 hover:brightness-75"
+			/>
 		),
 		link: "https://linkedin.com/in/oyera",
 	},
 	{
 		id: 2,
 		content: (
-			<TwitterLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
+			<Image
+				alt="bluesky"
+				src={"/logo/bluesky.svg"}
+				width={24}
+				height={24}
+				className="brightness-150 grayscale duration-150 hover:brightness-75"
+			/>
 		),
-		link: "/about",
+		link: "https://bsky.app/profile/oyera.dev",
 	},
 	{
 		id: 3,
 		content: (
-			<GithubLogo size={24} weight="fill" className=" duration-150 hover:brightness-75" />
+			<GithubLogo
+				size={24}
+				weight="fill"
+				className=" duration-150 hover:brightness-75"
+			/>
 		),
-		link: "/about",
+		link: "https://github.com/oyera1",
 	},
 ];
 

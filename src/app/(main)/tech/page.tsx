@@ -1,5 +1,10 @@
 import { TechCard } from "@/components/tech/tech-card";
 import { techData } from "@/constants/tech-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Tech Stack",
+};
 
 export default function TechPage() {
 	return (
