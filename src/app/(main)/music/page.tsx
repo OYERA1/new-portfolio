@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function PlaylistPage() {
 	return (
-		<main className="flex w-full flex-col items-center py-20 text-accent">
+		<div className="flex w-full flex-col items-center py-20 text-accent">
 			<div className="contains px-10 py-10 md:px-0">
 				<h1 className="font-bold text-7xl">Músicas do momento</h1>
 			</div>
@@ -51,6 +51,6 @@ export default function PlaylistPage() {
 					/>
 				</div>
 			</div>
-		</main>
+		</div>
 	);
 }

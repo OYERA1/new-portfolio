@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function BookPage() {
 	return (
-		<main className="flex w-full flex-col items-center py-20 text-accent">
+		<div className="flex w-full flex-col items-center py-20 text-accent">
 			<div className="contains flex-col justify-center px-5 py-10 md:px-0">
 				<h1 className="font-bold text-6xl md:text-7xl ">Biblioteca</h1>
 				<h2>
@@ -19,6 +19,6 @@ export default function BookPage() {
 			<div className="py-20">
 				<BookGrid />
 			</div>
-		</main>
+		</div>
 	);
 }

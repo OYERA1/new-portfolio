@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
 	return (
-		<main className="flex w-full flex-col items-center py-20 text-accent">
+		<div className="flex w-full flex-col items-center py-20 text-accent">
 			<div className="contains flex-col px-5 py-10 md:px-0">
 				<h1 className="font-bold text-7xl">Sobre</h1>
 				<h2 className="text-lg">Quem sou e o que faço</h2>
@@ -62,6 +62,6 @@ export default function AboutPage() {
 					</div>
 				</div>
 			</div>
-		</main>
+		</div>
 	);
 }

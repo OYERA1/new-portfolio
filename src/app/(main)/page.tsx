@@ -1,8 +1,23 @@
 import { Cards } from "@/components/cards/cards";
 import Spotify from "@/components/icons/spotify";
+import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Home",
+	description:
+		"Página inicial de OYERA, desenvolvedor Full-Stack especializado em Node.js e outras tecnologias. Confira meus projetos, stack e entre em contato!",
+	openGraph: {
+		type: "website",
+		title: "Home - OYERA",
+		description:
+			"Página inicial de OYERA, desenvolvedor Full-Stack especializado em Node.js e outras tecnologias...",
+		url: "https://oyera.dev",
+		siteName: "OYERA",
+	},
+};
 
 export default async function Home() {
 	const header = await headers();
@@ -14,10 +29,10 @@ export default async function Home() {
 	return (
 		<div className="contains flex-col gap-20 py-20">
 			<div className=" flex flex-col gap-3 px-5 md:p-0">
-				<h1 className="font-black text-6xl">
+				<span className="font-black text-6xl">
 					<span className="text-neutral-600/85">Quem é </span>
-					ØYERA?
-				</h1>
+					<h1>OYERA</h1>
+				</span>
 				<h2 className="font-light text-xl md:text-justify ">
 					Desenvolvedor Full-Stack especializado em ambientes Node.JS
 					<br />

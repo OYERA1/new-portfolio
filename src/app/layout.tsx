@@ -9,10 +9,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: {
-		default: "oyera.dev",
-		template: "%s | oyera.dev",
+		default: "OYERA",
+		template: "%s | OYERA",
 	},
-	description: "Portfolio de Luan Oyera",
+	description:
+		"Portfólio de Luan Oyera, Desenvolvedor Full-Stack especializado em Node.js, React e Next.js.",
+	openGraph: {
+		type: "website",
+		siteName: "OYERA",
+	},
 };
 
 export default function RootLayout({
