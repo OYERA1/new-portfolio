@@ -17,6 +17,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: `${BASE_URL}/contact`
         },
+        {
+            url: `${BASE_URL}/books`
+        },
 
     ]
 }
