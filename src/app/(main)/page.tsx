@@ -34,7 +34,8 @@ export default async function Home() {
 					<h1>OYERA</h1>
 				</span>
 				<h2 className="font-light text-xl md:text-justify ">
-					Desenvolvedor Full-Stack especializado em ambientes Node.JS
+					Luan Henrique Oyera Chiacherini, desenvolvedor Full-Stack
+					especializado em ambientes Node.JS
 					<br />
 					Com uma visão generalista, gosto de sempre me atualizar com as novas
 					tecnologias que aparecem no mercado, podendo atuar em todos os ciclos
