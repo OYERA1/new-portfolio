@@ -1,6 +1,8 @@
 # docker/dev.Dockerfile
 FROM oven/bun:alpine AS base
 
+ARG RESEND_API_KEY
+ENV RESEND_API_KEY = ${RESEND_API_KEY}
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
