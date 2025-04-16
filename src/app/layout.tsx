@@ -42,14 +42,6 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning
 		>
-			<Head>
-				<Script type="application/ld+json">
-					{
-						"@context": "https://schema.org",
-
-					}
-				</Script>
-			</Head>
 			<body className={`${inter.variable} antialiased`}>{children}</body>
 		</html>
 	);
